@@ -197,7 +197,8 @@ class PageHooks implements
 			}
 		}
 
-		if ( $output->getSkin()->getSkinName() === 'minerva' ) {
+		// Liberty 임시대응 (추후 Liberty 스킨 쪽에 새 주제 버튼이 표시되게 대응을 해야 할 것)
+		if ( $output->getSkin()->getSkinName() === 'minerva' || $output->getSkin()->getSkinName() === 'liberty'  ) {
 			if (
 				( $req->getRawVal( 'action' ) ?? 'view' ) === 'view' &&
 				HookUtils::isFeatureEnabledForOutput( $output, HookUtils::NEWTOPICTOOL ) &&
